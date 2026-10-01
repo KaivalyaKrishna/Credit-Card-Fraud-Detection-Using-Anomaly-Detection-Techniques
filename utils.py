@@ -17,6 +17,7 @@ FEATURE_NAMES = [
 BINARY_FEATURES = {"repeat_retailer", "used_chip", "used_pin_number", "online_order"}
 
 
+# ── Load model (cached so it only loads once) ─────────────────────────────────
 _detector = None
 
 def load_detector():
