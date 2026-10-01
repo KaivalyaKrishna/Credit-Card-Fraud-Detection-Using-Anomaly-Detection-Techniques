@@ -1,0 +1,5 @@
+streamlit
+cloudpickle
+xgboost
+pandas
+numpy
