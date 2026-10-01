@@ -2,13 +2,11 @@ import cloudpickle
 
 PKL_PATH = "fraud_detector.pkl"
 
-# ── Load model ────────────────────────────────────────────────────────────────
 with open(PKL_PATH, "rb") as f:
     detector = cloudpickle.load(f)
 
 print("Model loaded ✅\n")
 
-# ── Test cases ────────────────────────────────────────────────────────────────
 test_cases = [
     {
         "label": "Should be LEGIT  — nearby, normal price, repeat retailer",
@@ -60,7 +58,6 @@ test_cases = [
     },
 ]
 
-# ── Run tests ─────────────────────────────────────────────────────────────────
 SEP = "─" * 60
 
 for i, tc in enumerate(test_cases, 1):

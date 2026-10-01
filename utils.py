@@ -17,7 +17,6 @@ FEATURE_NAMES = [
 BINARY_FEATURES = {"repeat_retailer", "used_chip", "used_pin_number", "online_order"}
 
 
-# ── Load model (cached so it only loads once) ─────────────────────────────────
 _detector = None
 
 def load_detector():
@@ -28,7 +27,6 @@ def load_detector():
     return _detector
 
 
-# ── Build input dict from raw form values ─────────────────────────────────────
 def build_input(
     distance_from_home: float,
     distance_from_last_transaction: float,
@@ -49,7 +47,6 @@ def build_input(
     }
 
 
-# ── Run prediction, return structured result ──────────────────────────────────
 def predict(input_data: dict) -> dict:
     detector = load_detector()
     result = detector.predict(input_data)
