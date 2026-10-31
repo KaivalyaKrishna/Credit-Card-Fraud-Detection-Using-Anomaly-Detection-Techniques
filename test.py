@@ -4,10 +4,6 @@ import pandas as pd
 from xgboost import XGBClassifier
 
 
-# ============================================================
-# LOAD XGBOOST MODEL
-# ============================================================
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 MODEL_PATH = os.path.join(
@@ -21,10 +17,6 @@ model.load_model(MODEL_PATH)
 
 print("XGBoost model loaded ✅\n")
 
-
-# ============================================================
-# TEST CASES
-# ============================================================
 
 test_cases = [
     {
@@ -81,10 +73,6 @@ test_cases = [
 ]
 
 
-# ============================================================
-# VALIDATION
-# ============================================================
-
 FEATURE_NAMES = [
     "distance_from_home",
     "distance_from_last_transaction",
@@ -120,10 +108,6 @@ def validate_input(data):
                 f"Received: {data[feature]}"
             )
 
-
-# ============================================================
-# RUN TESTS
-# ============================================================
 
 SEP = "─" * 60
 
